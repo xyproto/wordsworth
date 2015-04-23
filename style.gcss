@@ -1,0 +1,94 @@
+@import url(//fonts.googleapis.com/css?family=Indie+Flower|Maven+Pro:400,900)
+
+
+/* Constants */
+
+$bgcolor: #023
+
+
+/* Mixins */
+
+$glow($color)
+  text-shadow: 0 0 0.2em $color, 0 0 0.2em $color
+
+
+/* Style */
+
+body
+  font-family: 'Maven Pro', sans-serif
+  font-weight: 400
+  font-size: 1em
+  margin: 3em
+  color: black
+  background: url(img/bg.jpg) no-repeat center center fixed
+  background-size: cover
+
+h1
+  color: white
+  font-family: 'Maven Pro', sans-serif
+  font-weight: 900
+  font-size: 4em
+  $glow(black)
+
+h2
+  font-family: 'Indie Flower'
+  margin-top: -1.4em
+  margin-left: 4.4em
+  color: white
+  font-size: 2.5em
+  font-style: italic
+  margin-bottom: 1.5em
+  $glow(white)
+
+h3
+  color: $bgcolor
+  margin-left: 1em
+  margin-bottom: 1.5em
+
+label
+  display: inline-block
+  float: left
+  clear: left
+  width: 9em
+  text-align: right
+  margin-right: 1em
+
+input
+  display: inline-block
+  float: left
+  margin-top: 0.3em
+
+button
+  font-size: 1.5em
+  height: 1.9em
+  margin-top: 0.8em
+  float: right
+  font-family: 'Oswald', sans-serif
+  border: 2px solid $bgcolor
+  border-radius: 10px/6px
+  background-color: $bgcolor
+  color: white
+  &:hover
+    background-color: white
+    color: $bgcolor
+
+div
+  margin-left: 2em
+
+div#content:
+  text-align: start
+
+div#box
+  background-color: white
+  padding: 0em 2em 2em 0.5em
+  margin-bottom: 2em
+  float: left
+  box-shadow: 10px 10px 10px rgba(20, 20, 20, 128)
+  border-radius: 10px/6px
+
+div#spacing
+  width: 2%
+  background-color: red
+
+p
+  margin-left: 0.7em
