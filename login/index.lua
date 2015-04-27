@@ -1,5 +1,7 @@
 if method() == "POST" then
-  log("post post post")
+  serve("post.amber")
 elseif method() == "GET" then
-  log("get get get")
+  serve("get.amber")
 end
+
+-- vim:set ts=2 sw=2 et:
