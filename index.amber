@@ -17,14 +17,12 @@ html
             input[id="password"][name="password"][type="password"]
             br
             button[id="loginButton"] Login
-      div#spacing
-        aa
       div#box
         h3 Register
         form[id="loginForm"][action="/register"][method="POST"]
           div#register
-            label[for="username"] Username:
-            input[id="username"]
+            label[for="register_username"] Username:
+            input[id="register_username"]
             br
             label[for="email"] Email:
             input[id="email"]
@@ -37,6 +35,17 @@ html
             br
             button[id="registerButton"] Register
       script[type="text/javascript"]
+        // Set focus to the username field
         document.getElementById("username").focus()
+        // Add the username to the login URL
+        document.getElementById("loginButton").onclick = function() {
+          frm = document.getElementById("loginForm");
+          frm.action += "#" + document.getElementById("username").value;
+        }
+        // Add the register_username to the register URL
+        document.getElementById("registerButton").onclick = function() {
+          frm = document.getElementById("registerForm");
+          frm.action += "#" + document.getElementById("register_username").value;
+        }
 
       
