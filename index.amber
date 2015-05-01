@@ -40,12 +40,12 @@ html
         // Add the username to the login URL
         document.getElementById("loginButton").onclick = function() {
           frm = document.getElementById("loginForm");
-          frm.action += "#" + document.getElementById("username").value;
+          frm.action += "?username=" + document.getElementById("username").value;
         }
         // Add the register_username to the register URL
         document.getElementById("registerButton").onclick = function() {
           frm = document.getElementById("registerForm");
-          frm.action += "#" + document.getElementById("register_username").value;
+          frm.action += "?username=" + document.getElementById("register_username").value;
         }
 
       
