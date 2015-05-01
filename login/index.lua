@@ -1,6 +1,8 @@
 if method() == "GET" then
-  serve("index.amber")
+  -- Go to the main page if this is a GET request
+  serve("../index.amber")
 elseif method() == "POST" then
+  -- Try to log in the user if this is a POST request
   content("text/html")
   local data = formdata()
   local username = data["username"]
@@ -9,6 +11,7 @@ elseif method() == "POST" then
     print("Correct username and password.")
     if CookieLogin(username) then
       print("User was logged in with a cookie.")
+      --serve("../chat/index.amber")
     else
       print("Could not set login cookie!")
     end
